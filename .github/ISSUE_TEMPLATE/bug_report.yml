@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ¡Gracias por reportar un problema! **El rastreador de problemas solo se utiliza para informar errores.** Las nuevas sugerencias de funciones y preguntas deben discutirse en la Comunidad o enviarse a través de nuestro formulario de comentarios de usuarios.
+        Sistema de reportes de festify, se claro.
   - type: textarea
     attributes:
       label: Comportamiento Actual
@@ -31,20 +31,6 @@ body:
         5. Observar que el proyecto no se compila
     validations:
       required: false
-  - type: checkboxes
-    id: reproducible-from-blank
-    attributes:
-      label: Reproducible desde Cero
-      description: Los pasos para reproducir *deben* comenzar desde un proyecto en blanco, asegurando que sea un error reproducible dentro de FlutterFlow.
-      options:
-        - label: Los pasos para reproducir arriba comienzan desde un proyecto en blanco.
-          required: false
-  - type: textarea
-    attributes:
-      label: Contexto
-      description: ¿Cómo ha afectado este problema? ¿Qué estás tratando de lograr?
-    validations:
-      required: true
   - type: textarea
     attributes:
       label: Documentación Visual
@@ -63,23 +49,5 @@ body:
         Cualquier captura de pantalla adicional, grabaciones, enlaces, referencias o cualquier otra cosa que nos brinde más contexto sobre el problema que estás encontrando.
 
         Consejo: Puedes adjuntar imágenes o archivos de registro haciendo clic en esta área para resaltarlo y luego arrastrando archivos.
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: Entorno
-      description: |
-        Incluye detalles relevantes sobre el entorno en el que experimentaste el error.
-        Ejemplos:
-          - **Versión de FlutterFlow**: v3.1 (lanzada el 27 de febrero de 2023)
-          - **Plataforma** (p. ej., Web, Aplicación de escritorio MacOS): Web
-          - **Nombre y versión del navegador** (web): Chrome 107.0.5304.110
-          - **Sistema operativo y versión** (escritorio): macOS Monterey 12.2.1
-      value: |
-          - Versión de FlutterFlow: 
-          - Plataforma:
-          - Nombre y versión del navegador:
-          - Sistema operativo y versión afectada: 
-      render: markdown
     validations:
       required: false
