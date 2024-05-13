@@ -30,7 +30,7 @@ body:
         4. Hacer clic en Ejecutar
         5. Observar que el proyecto no se compila
     validations:
-      required: true
+      required: false
   - type: checkboxes
     id: reproducible-from-blank
     attributes:
@@ -38,7 +38,7 @@ body:
       description: Los pasos para reproducir *deben* comenzar desde un proyecto en blanco, asegurando que sea un error reproducible dentro de FlutterFlow.
       options:
         - label: Los pasos para reproducir arriba comienzan desde un proyecto en blanco.
-          required: true
+          required: false
   - type: textarea
     attributes:
       label: Contexto
