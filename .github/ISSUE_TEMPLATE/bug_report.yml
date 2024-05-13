@@ -1,9 +1,12 @@
-name: 🐛 Reporte de error FESTIFY
-description: Reporta un error en FESTIFY.
+name: 🐛 Reporte de error
+description: Reporta un error o regresión reproducible.
 labels: ["estado: necesita revisión"]
 body:
-
- - type: textarea
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por reportar un problema! **El rastreador de problemas solo se utiliza para informar errores.** Las nuevas sugerencias de funciones y preguntas deben discutirse en la Comunidad o enviarse a través de nuestro formulario de comentarios de usuarios.
+  - type: textarea
     attributes:
       label: Comportamiento Actual
       description: Una descripción concisa de lo que estás experimentando.
@@ -28,6 +31,20 @@ body:
         5. Observar que el proyecto no se compila
     validations:
       required: false
+  - type: checkboxes
+    id: reproducible-from-blank
+    attributes:
+      label: Reproducible desde Cero
+      description: Los pasos para reproducir *deben* comenzar desde un proyecto en blanco, asegurando que sea un error reproducible dentro de FlutterFlow.
+      options:
+        - label: Los pasos para reproducir arriba comienzan desde un proyecto en blanco.
+          required: false
+  - type: textarea
+    attributes:
+      label: Contexto
+      description: ¿Cómo ha afectado este problema? ¿Qué estás tratando de lograr?
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Documentación Visual
@@ -52,7 +69,12 @@ body:
     attributes:
       label: Entorno
       description: |
-        Queremos saber si pasa en IOS o Android o en ambos
+        Incluye detalles relevantes sobre el entorno en el que experimentaste el error.
+        Ejemplos:
+          - **Versión de FlutterFlow**: v3.1 (lanzada el 27 de febrero de 2023)
+          - **Plataforma** (p. ej., Web, Aplicación de escritorio MacOS): Web
+          - **Nombre y versión del navegador** (web): Chrome 107.0.5304.110
+          - **Sistema operativo y versión** (escritorio): macOS Monterey 12.2.1
       value: |
           - Versión de FlutterFlow: 
           - Plataforma:
