@@ -1,5 +1,5 @@
-name: 🐛 Reporte de error
-description: Reporta un error o regresión reproducible.
+name: Reportes en Festify🐛 
+description: Reporta un error en la app FESTIFY.
 labels: ["estado: necesita revisión"]
 body:
   - type: markdown
