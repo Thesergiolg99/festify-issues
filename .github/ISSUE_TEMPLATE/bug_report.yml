@@ -2,6 +2,7 @@ name: 🐛 Reporte de error FESTIFY
 description: Reporta un error en FESTIFY.
 labels: ["estado: necesita revisión"]
 body:
+
  - type: textarea
     attributes:
       label: Comportamiento Actual
