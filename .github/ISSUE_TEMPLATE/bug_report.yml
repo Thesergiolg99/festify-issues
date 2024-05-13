@@ -1,141 +1,85 @@
-name: 🐛 Bug report
-description: Report a reproducible bug or regression.
-labels: ["status: needs triage"]
+name: 🐛 Reporte de error
+description: Reporta un error o regresión reproducible.
+labels: ["estado: necesita revisión"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting an issue! **The issue tracker is ONLY used for reporting bugs.** New feature suggestions and questions should be discussed on Community or submitted through our user feedback form.
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Has your issue been reported?
-      description: Please search to see if an issue already exists for the bug you encountered.
-      options:
-        - label: I have searched the existing issues and confirm it has not been reported.
-          required: true
-        - label: I give permission for members of the FlutterFlow team to access and test my project for the sole purpose of investigating this issue.
-          required: true
+        ¡Gracias por reportar un problema! **El rastreador de problemas solo se utiliza para informar errores.** Las nuevas sugerencias de funciones y preguntas deben discutirse en la Comunidad o enviarse a través de nuestro formulario de comentarios de usuarios.
   - type: textarea
     attributes:
-      label: Current Behavior
-      description: A concise description of what you're experiencing.
+      label: Comportamiento Actual
+      description: Una descripción concisa de lo que estás experimentando.
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Expected Behavior
-      description: A concise description of what you expected to happen.
+      label: Comportamiento Esperado
+      description: Una descripción concisa de lo que esperabas que sucediera.
     validations:
       required: true  
   - type: textarea
     attributes:
-      label: Steps to Reproduce
+      label: Pasos para Reproducir
       description: |
-        Please be detailed as possible here so we can help diagnose the issue.
-        Issues cannot be accepted if they are too vague. For example, "project fails to build" would not be reproducible.
+        Por favor, sé lo más detallado posible aquí para que podamos ayudar a diagnosticar el problema. Los problemas no pueden ser aceptados si son demasiado vagos. Por ejemplo, 'el proyecto no se compila' no sería reproducible.
       placeholder: |
-        1. Create new page
-        2. Add container widget
-        3. Set width = 123
-        4. Click Run
-        5. Observe that project doesn't build
+        1. Crear nueva página
+        2. Agregar widget de contenedor
+        3. Establecer ancho = 123
+        4. Hacer clic en Ejecutar
+        5. Observar que el proyecto no se compila
     validations:
       required: true
   - type: checkboxes
     id: reproducible-from-blank
     attributes:
-      label: Reproducible from Blank
-      description: The steps to reproduce *must* start from a blank project, ensuring that it is a reproducible bug within FlutterFlow. 
+      label: Reproducible desde Cero
+      description: Los pasos para reproducir *deben* comenzar desde un proyecto en blanco, asegurando que sea un error reproducible dentro de FlutterFlow.
       options:
-        - label: The steps to reproduce above start from a blank project.
+        - label: Los pasos para reproducir arriba comienzan desde un proyecto en blanco.
           required: true
-  - type: input
-    id: bugcode
+  - type: textarea
     attributes:
-      label: Bug Report Code (Required)
-      description: |
-        Generate by right clicking inside Widget Tree and selecting "Get Bug Report Code". 
-        This helps the team assess your issue. Create a code by going to the widget tree, right clicking on the affected widget, and selecting “Get Bug Report Code”. 
-        If the bug is not specific to a widget, selecting any widget will work.
-      placeholder: ex. ITFXhfH104V2sdRE+aXIYflViiowGUwbUOc7j9VEGAsjCePkP4k1Pc7CUFZpSOqHTGxUPk6Ikk8fw+zOv+zhEewpAw+CGapawbphH1yjEA8=
+      label: Contexto
+      description: ¿Cómo ha afectado este problema? ¿Qué estás tratando de lograr?
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Context
-      description: How has this issue affected you? What are you trying to accomplish?
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Visual documentation
+      label: Documentación Visual
       description: |
-        Images and/or a brief video showing the the steps to reproduce the issue you are reporting.
+        Imágenes y/o un breve video que muestren los pasos para reproducir el problema que estás reportando.
        
-        Adding images and video snippets will help to speed up investigation and allow us to resolve issues more quickly.
+        Agregar imágenes y fragmentos de video ayudará a acelerar la investigación y nos permitirá resolver problemas más rápidamente.
 
-        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+        Consejo: Puedes adjuntar imágenes o archivos de registro haciendo clic en esta área para resaltarlo y luego arrastrando archivos.
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Additional Info
+      label: Información Adicional
       description: |
-        Any extra screenshots, recordings, links, references, or anything else that will give us more context about the issue you are encountering.
+        Cualquier captura de pantalla adicional, grabaciones, enlaces, referencias o cualquier otra cosa que nos brinde más contexto sobre el problema que estás encontrando.
 
-        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+        Consejo: Puedes adjuntar imágenes o archivos de registro haciendo clic en esta área para resaltarlo y luego arrastrando archivos.
     validations:
       required: false
   - type: textarea
     attributes:
-      label: Environment
+      label: Entorno
       description: |
-        Include relevant details about the environment you experienced the bug in.
-        Examples:
-          - **FlutterFlow version**: v3.1 (released Feb 27, 2023)
-          - **Platform** (e.g. Web, MacOS Desktop): Web
-          - **Browser name and version** (web): Chrome 107.0.5304.110
-          - **Operating system and version** (desktop): macOS Monterey 12.2.1
+        Incluye detalles relevantes sobre el entorno en el que experimentaste el error.
+        Ejemplos:
+          - **Versión de FlutterFlow**: v3.1 (lanzada el 27 de febrero de 2023)
+          - **Plataforma** (p. ej., Web, Aplicación de escritorio MacOS): Web
+          - **Nombre y versión del navegador** (web): Chrome 107.0.5304.110
+          - **Sistema operativo y versión** (escritorio): macOS Monterey 12.2.1
       value: |
-          - FlutterFlow version: 
-          - Platform:
-          - Browser name and version:
-          - Operating system and version affected: 
+          - Versión de FlutterFlow: 
+          - Plataforma:
+          - Nombre y versión del navegador:
+          - Sistema operativo y versión afectada: 
       render: markdown
     validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: "## Please fill out the following section for Data Loss issues"
-  - type: checkboxes
-    id: dataloss1
-    attributes:
-      label: General
-      options:
-        - label: I was collaborating with other users in the same project prior to data loss
-        - label: I navigated between different project views leading up to data loss
-        - label: The UI was running very slowly prior to data loss
-        - label: A crash or other bug occurred prior to data loss
-        - label: Data was not saved in a snapshot
-        - label: I was using flutterflow from multiple devices
-        - label: I was using flutterflow from multiple platforms (e.g. both web and MacOS Desktop app)
-  - type: checkboxes
-    id: dataloss2
-    attributes:
-      label: Relative to the time the changes were made, data was lost within
-      options:
-        - label: 1 minute
-        - label: 1 hour
-        - label: 1 day
-        - label: 1 week
-  - type: checkboxes
-    id: dataloss3
-    attributes:
-      label: When following my steps to reproduce, data loss happens
-      options:
-        - label: ~100% of the time
-        - label: ~50% of the time
-        - label: ~10% of the time
-        - label: ~1% of the time
-        - label: Very rarely or only encountered once
+      required: false
